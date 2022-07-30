@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration</title>
+<style> 
+	h1 {text-align: center;}
+	div {text-align: start;}
+	img {text-align: center;}
+	    .center {
+ 		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  max-width: 100%;
+		  height: auto;
+		}
+
+	body {font-family: Arial, Helvetica, sans-serif;}
+		* {box-sizing: border-box;}
+		.content {
+			  max-width: 500px;
+			  margin: auto;
+		}
+
+		.form-inline {  
+		  display: flex-end;
+		  flex-flow: column wrap;
+		  align-items: start;
+		}
+		
+		.form-inline label {
+		  margin: 5px 10px 5px 0;
+		}
+
+		.form-inline input {
+		  vertical-align: middle;
+		  margin: 10px 10px 10px 0;
+		  padding: 10px;
+		  background-color: #fff;
+		  border: 1px solid #ddd;
+		}
+
+		.form-inline button {
+		  padding: 10px 20px;
+		  background-color: dodgerblue;
+		  border: 1px solid #ddd;
+		  color: white;
+		  cursor: pointer;
+		}
+
+		.form-inline button:hover {
+		  background-color: royalblue;
+		}
+
+		@media (max-width: 800px) {
+		  .form-inline input {
+		   margin: 10px 0;
+		  }
+		  
+		.form-inline {
+		  flex-direction: column;
+		  align-items: stretch;
+		  }
+		}
+
+		.all-browsers {
+		  margin: 0;
+		  padding: 5px;
+		  background-color: lightgray;
+		}
+
+		.all-browsers > h1, .browser {
+		  margin: 10px;
+		  padding: 5px;
+		}
+
+		.browser {
+		  background: white;
+		}
+
+		.browser > h2, p {
+		  margin: 4px;
+		  font-size: 90%;
+		}
+
+	footer {
+		  text-align: center;
+		  padding: 3px;
+		  background-color: orange;
+		  color: white;
+		}
+
+		a:link {
+			background-color: white;
+		}
+</style>
+</head>
+<body>
+	<h1>Register for more personalized exercises which fit your symptoms!</h1>
+	<img src="exercises_reg.webp" width="600" height="250" class="center"><br>
+	<br>
+	<!-- Use GET, not POST until ready to integrate API -->
+	<div class="content">
+		<form method="GET" class="form-inline">
+		<fieldset>
+			<legend>Register Here</legend>
+			First Name: <input type="text" name="firstname"><br>
+			Last Name: <input type="text" name="lastname"><br>
+			Email: <input type="email" name="email" placeholder="you@email.com" required><br>
+			Phone: <input type="tel" id=phone name="phone" placeholder="888-888-8888" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+			DOB: <input type="date" name="dob"><br>
+			<br>
+			Gender:<br>
+			<br>
+			<input type="radio" name="gender" value="Male">Male<br>
+			<input type="radio" name="gender" value="Female">Female<br>
+			<input type="radio" name="gender" value="Other">Other<br>
+			<br>
+			Have been diagnoses with TOS? <br>
+			<br>
+			<input type="checkbox" name="no"> Yes<br>
+			<input type="checkbox" name="no"> NO<br>
+			<br>
+			Are you Currently In Treatment? <br>
+			<br>
+			<select name="Are you Currently in Treatment?">
+				<option value="Yes" name="intreatment_yes">Yes</option>
+				<option value="Never" name="intreatment_never">Never</option>
+				<option value="I was" name="intreatment_was">I Was</option><br>
+				<br>
+			</select><br>
+			<br>
+			Password: <input type="password" name=password min="5"><br>
+			<input type="submit" value="Register">
+			<input type="reset">
+			<br>
+		</fieldset>
+		</form>
+	</div>
+</body>
+<br>
+<footer>
+	<p>Author: DR. Peer View<br>
+  	<a href="tos@tostreament.com">tos@tostreament.com</a></p>
+</footer>
+</html>
